@@ -1,14 +1,16 @@
 require 'boris_bikes'
 
 describe Bike do
+	let(:bike) {Bike.new}
 
 	it 'is not broken' do
-		expect(Bike.new).not_to be_broken
+		expect(bike).not_to be_broken
 	end
 
 	it 'can break' do
-		bike = Bike.new
 		bike.break!
 		expect(bike).to be_broken
 	end
+
+	it 'can be fixed'
 end
