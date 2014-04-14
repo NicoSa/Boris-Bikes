@@ -1,4 +1,4 @@
-boris-bikes
+Boris-Bikes
 ===========
 
-Boris Bikes at Makers Academy!
+Boris Bikes at Makers Academy! Learning objected oriented programming!
