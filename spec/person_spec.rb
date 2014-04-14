@@ -33,4 +33,10 @@ describe Person do
 		expect(station).to receive(:accept_bike)
 		person.return_bike_to(station)
 	end
+
+	it 'no bike after return bike to station' do
+		station = double :station, dock: :bike
+		person.return_bike_to(station)
+		expect(person).not_to have_bike
+		end
 end
