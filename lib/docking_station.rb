@@ -24,4 +24,8 @@ class Docking_Station
 		@bikes.count
 	end
 
+	def capacity
+		@bikes.count < 20 ? "Not Full" : "Full" 
+	end
+
 end
