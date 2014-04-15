@@ -1,6 +1,7 @@
 class Person
-	def initialize
-		@bike = nil
+
+	def initialize(bike=nil)
+		@bike = bike
 	end
 
 	def has_bike?
@@ -11,7 +12,7 @@ class Person
 		@bike = station.release
 	end
 
-	def crash!(bike)
+	def crash!
 		@bike.break!
 	end
 

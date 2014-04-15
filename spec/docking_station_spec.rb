@@ -33,16 +33,16 @@ describe Docking_Station do
 		expect{21.times{station.dock(bike)}}.to raise_error "It can only take 20!"
 	end
 
-	it 'knows the amount of stored bikes' do
-		# bike = double, :bike
-		# station.dock(bike)
-		# expect(station.stock).to eq 
-	end
-
-	
-
-	
-
-	it 'knows broken bikes' do
+	it 'won´t release broken bike to person' do
+		#bike = double :bike, :broken?
+		#expect(bike.broken?).not_to station.release
 	end
 end
+
+=begin 
+-ACCEPT A BIKE
+-RELEASE A BIKE
+-Capacity limit
+-How many bikes?
+-broken bike? release to van, notto release to person
+=end
