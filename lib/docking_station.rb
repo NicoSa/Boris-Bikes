@@ -13,11 +13,15 @@ class Docking_Station
 	end
 
 	def dock(bike)
-		@bikes << bike
+		if @bikes.count < 20
+			@bikes << bike
+		else
+			raise "It can only take 20!"
+		end
 	end
 
-	def release(bike)
-		@bikes.delete(bike)
+	def release
+		@bikes.pop
 	end
 
 	def stock

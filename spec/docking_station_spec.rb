@@ -12,8 +12,7 @@ describe Docking_Station do
 	end
 
 	it 'releases bikes' do
-		bike = double, :bike
-		station.release(bike)
+		station.release
 		expect(station.stock).to eq 0
 	end
 
@@ -30,9 +29,8 @@ describe Docking_Station do
 	end
 
 	it 'knows its full capacity is 20' do
-		# bike = double, :bike
-		# 21.times{station.dock(bike)}
-		# expect(station.dock).to eq "Can only hold 20 bikes"
+		bike = double, :bike
+		expect{21.times{station.dock(bike)}}.to raise_error "It can only take 20!"
 	end
 
 	it 'knows the amount of stored bikes' do
