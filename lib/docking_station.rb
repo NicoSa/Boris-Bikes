@@ -9,6 +9,9 @@
 class Docking_Station
 
 	def has_bikes?
-		true
+		1
+	end
+
+	def dock(bike)
 	end
 end
