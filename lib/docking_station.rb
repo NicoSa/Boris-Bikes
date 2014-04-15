@@ -2,6 +2,7 @@ class Docking_Station
 
 	def initialize
 		@bikes = []
+		10.times(station.dock(bike))
 	end
 
 	def dock(bike)
