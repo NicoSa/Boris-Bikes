@@ -12,7 +12,7 @@ class Person
 	end
 
 	def crash!(bike)
-		@bike = bike.break!
+		@bike.break!
 	end
 
 	def return_bike_to(station)
