@@ -2,7 +2,6 @@ class Docking_Station
 
 	def initialize
 		@bikes = []
-		10.times(station.dock(bike))
 	end
 
 	def dock(bike)
@@ -25,4 +24,7 @@ class Docking_Station
 		@bikes.count < 20 ? "Not Full" : "Full" 
 	end
 
+	def recognize_broken_bike
+		@bikes.select{|bike| bike.broken?}
+	end
 end

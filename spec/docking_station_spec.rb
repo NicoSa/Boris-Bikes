@@ -3,8 +3,8 @@ require 'docking_station'
 describe Docking_Station do
 
 	let(:station) { Docking_Station.new}
+	let(:broken_bike) {(Bike.new).break!}
 
-	
 	it 'accepts bikes' do
 		bike = double, :bike
 		station.dock(bike)
@@ -33,9 +33,9 @@ describe Docking_Station do
 		expect{21.times{station.dock(bike)}}.to raise_error "It can only take 20!"
 	end
 
-	it 'won´t release broken bike to person' do
-		#bike = double :bike, :broken?
-		#expect(bike.broken?).not_to station.release
+	it 'recognizes broken bike' do
+		station.dock broken_bike
+		expect(station.recognize_broken_bike).to eq ([broken_bike])		
 	end
 end
 
