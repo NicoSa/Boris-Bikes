@@ -4,7 +4,7 @@ This is a simulation of Boris Bikes at Makers Academy! Boris Bikes is a Bike ren
 
 Objectives of exercise
 ----
-Learning objected oriented programming using test driven development!
+Learning Object-Oriented-Programming and Test-Driven-Development!
 
 Technologies used
 ----
